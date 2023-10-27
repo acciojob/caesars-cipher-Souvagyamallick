@@ -35,7 +35,12 @@ function rot13(str) {
 	let output="";
 	str = str.toUpperCase();
 	for(let i=0; i<str.length; i++){
+		if(lookup[str[i]]){
 		output += lookup[str[i]];
+		}
+		else{
+			output  += str[i];
+		}
 	}
 	return output;
 }
